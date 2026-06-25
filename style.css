@@ -368,3 +368,15 @@ section h2 {
 .contact-form textarea:focus {
   border-color: var(--accent);
 }
+
+.error {
+  min-height: 18px;
+  color: #fb7185;
+  font-size: 0.85rem;
+}
+
+.form-success {
+  min-height: 20px;
+  color: #22c55e;
+  font-weight: 700;
+}
