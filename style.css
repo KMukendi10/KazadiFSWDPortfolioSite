@@ -119,7 +119,7 @@ a {
   align-items: center;
 }
 
-.eyebrow, .section-label {
+.section-label {
   color: var(--accent);
   text-transform: uppercase;
   letter-spacing: 2px;
