@@ -380,3 +380,21 @@ section h2 {
   color: #22c55e;
   font-weight: 700;
 }
+
+.footer {
+  border-top: 1px solid var(--border);
+  padding: 25px 0;
+  color: var(--muted);
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.footer a {
+  color: var(--accent);
+  font-weight: 700;
+}
