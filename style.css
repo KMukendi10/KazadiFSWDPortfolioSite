@@ -4,7 +4,7 @@
   --surface-light: #12243b;
   --text: #f5f7fb;
   --muted: #a9b6c8;
-  --accent: #38bdf8;
+  --accent: #6593a7;
   --accent-dark: #0284c7;
   --border: rgba(255, 255, 255, 0.1);
   --shadow: 0 24px 60px rgba(0, 0, 0, 0.25);
@@ -24,7 +24,7 @@ body {
   font-family: "Inter", Arial, sans-serif;
   background: var(--bg);
   color: var(--text);
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 a {
@@ -33,7 +33,7 @@ a {
 }
 
 .container {
-  width: min(1120px, 92%);
+  width: min(1000px, 100%);
   margin: 0 auto;
 }
 
@@ -106,10 +106,9 @@ a {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background:
-    radial-gradient(circle at top left, rgba(56, 189, 248, 0.18), transparent 35%),
-    radial-gradient(circle at bottom right, rgba(37, 99, 235, 0.16), transparent 35%);
+  background: linear-gradient(rgba(7, 17, 31, 0.75), rgba(7, 17, 31, 0.75)), url("./Assets/HeroImg.jpg");
   padding-top: 130px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .hero-grid, .two-column, .contact-grid {
@@ -121,17 +120,15 @@ a {
 
 .section-label {
   color: var(--accent);
-  text-transform: uppercase;
   letter-spacing: 2px;
-  font-size: 0.78rem;
+  font-size: 14px;
   font-weight: 800;
-  margin-bottom: 12px;
+  margin-bottom: 15px;
 }
 
 .hero h1 {
-  font-size: clamp(2.5rem, 7vw, 5rem);
+  font-size: 80px;
   line-height: 1;
-  letter-spacing: -3px;
   margin-bottom: 16px;
 }
 
@@ -140,7 +137,7 @@ a {
 }
 
 .hero h2 {
-  font-size: clamp(1.25rem, 3vw, 2rem);
+  font-size: 30px;
   color: var(--muted);
   margin-bottom: 20px;
 }
@@ -149,24 +146,25 @@ a {
 .text-box p,
 .contact-text {
   color: var(--muted);
-  font-size: 1.02rem;
+  font-size: 16px;
 }
 
 .hero-actions {
   display: flex;
   gap: 15px;
   flex-wrap: wrap;
-  margin-top: 32px;
+  margin-top: 30px;
 }
 
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 13px 22px;
-  border-radius: 999px;
+  padding: 6px 15px;
+  border-radius: 20px;
   border: 1px solid transparent;
-  font-weight: 800;
+  font-weight: 700;
+  font-size: 13px;
   cursor: pointer;
   transition: transform 0.2s ease, background 0.2s ease;
 }
@@ -186,13 +184,18 @@ a {
   background: rgba(255, 255, 255, 0.04);
 }
 
-.hero-card,
+.hero-card {
+  background: linear-gradient(180deg, var(--surface), var(--surface-light)), 0.9;
+  border: 1px solid var(--border);
+  border-radius: 25px;
+}
+
 .text-box,
 .contact-form,
 .project-card {
   background: linear-gradient(180deg, var(--surface), var(--surface-light));
   border: 1px solid var(--border);
-  border-radius: 28px;
+  border-radius: 25px;
   box-shadow: var(--shadow);
 }
 
@@ -206,12 +209,11 @@ a {
   height: 160px;
   margin: 0 auto 25px;
   display: grid;
-  place-items: center;
   border-radius: 50%;
   background-image: url("./Assets/KazadiProfile.png");
   background-size: cover;
   background-position: center;
-  border: 1px solid var(--accent);
+  border: 0.1px solid rgb(100, 100, 100);
   font-size: 3.5rem;
   font-weight: 900;
   letter-spacing: -4px;
@@ -387,16 +389,47 @@ section h2 {
   color: var(--muted);
 }
 
-.footer-content {
-  display: flex;
-  justify-content: space-between;
-  gap: 18px;
-  flex-wrap: wrap;
-}
-
 .footer a {
   color: var(--accent);
   font-weight: 700;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 18px;
+}
+
+.footer-links a {
+  width: 50px;
+  height: 50px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  font-size: 1.3rem;
+  transition: 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: var(--accent);
+  transform: translateY(-3px);
+}
+
+.copyrights {
+    display: flex;
+    justify-content: space-between;
+    font-size: small;
 }
 
 @media (max-width: 900px) {
