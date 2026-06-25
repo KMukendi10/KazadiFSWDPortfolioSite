@@ -167,3 +167,36 @@
       </div>
     </section>
 
+    <section class="section contact" id="contact">
+      <div class="container contact-grid">
+        <div>
+          <p class="section-label">Get In Touch</p>
+          <h2>Contact Me</h2>
+          <p class="contact-text">
+            Have a project, collaboration idea or opportunity? Send me a message and I will get back to you.
+          </p>
+          <div class="contact-details">
+            <a href="mailto:kazadishadrackmukendi@gmail.com">kazadishadrackmukendi@gmail.com</a>
+            <a href="https://github.com/KMukendi10" target="_blank" rel="noopener">github.com/KMukendi10</a>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contactForm">
+          <label for="name">Name</label>
+          <input type="text" id="name" placeholder="Your name">
+          <small class="error" id="nameError"></small>
+
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="your@email.com">
+          <small class="error" id="emailError"></small>
+
+          <label for="message">Message</label>
+          <textarea id="message" rows="5" placeholder="Write your message"></textarea>
+          <small class="error" id="messageError"></small>
+
+          <button type="submit" class="btn primary-btn">Send Message</button>
+          <p class="form-success" id="formSuccess"></p>
+        </form>
+      </div>
+    </section>
+  </main>
