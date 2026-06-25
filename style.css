@@ -330,3 +330,41 @@ section h2 {
   color: var(--accent);
   font-weight: 800;
 }
+
+.contact-details {
+  display: grid;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.contact-details a {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.contact-form {
+  padding: 32px;
+  display: grid;
+  gap: 10px;
+}
+
+.contact-form label {
+  font-weight: 700;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: #07111f;
+  color: var(--text);
+  font-family: inherit;
+  outline: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--accent);
+}
