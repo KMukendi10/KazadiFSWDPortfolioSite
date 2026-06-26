@@ -1,3 +1,6 @@
+/* ======================
+   RESET & BASE STYLES
+====================== */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -29,6 +32,11 @@ a {
   padding: 95px 0;
 }
 
+/* =====================
+   HEADER / NAVIGATION
+====================== */
+
+/* Fixed nav */
 .site-header {
   position: fixed;
   top: 0;
@@ -39,6 +47,7 @@ a {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+/* Navbar layout */
 .navbar {
   min-height: 76px;
   display: flex;
@@ -46,6 +55,7 @@ a {
   justify-content: space-between;
 }
 
+/* Logo styling */
 .logo {
   width: 48px;
   height: 48px;
@@ -59,6 +69,7 @@ a {
   background-position: center;
 }
 
+/* Navigation links */
 .nav-links {
   display: flex;
   gap: 30px;
@@ -74,6 +85,7 @@ a {
   color: #6593a7;
 }
 
+/* Mobile menu toggle button */
 .menu-toggle {
   display: none;
   background: none;
@@ -90,6 +102,11 @@ a {
   border-radius: 99px;
 }
 
+/* ==============
+   HERO SECTION
+============== */
+
+/* Hero section background and layout */
 .hero {
   min-height: 100vh;
   display: flex;
@@ -99,6 +116,7 @@ a {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+/* Grid layout used across sections */
 .hero-grid,
 .two-column,
 .contact-grid {
@@ -108,6 +126,7 @@ a {
   align-items: center;
 }
 
+/* Small sections */
 .section-label {
   color: #6593a7;
   letter-spacing: 2px;
@@ -132,6 +151,7 @@ a {
   margin-bottom: 20px;
 }
 
+/* General text styling */
 .hero-text,
 .text-box p,
 .contact-text {
@@ -139,6 +159,7 @@ a {
   font-size: 16px;
 }
 
+/* Buttons container */
 .hero-actions {
   display: flex;
   gap: 15px;
@@ -146,6 +167,7 @@ a {
   margin-top: 30px;
 }
 
+/* Base button style */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -174,6 +196,7 @@ a {
   background: rgba(255, 255, 255, 0.04);
 }
 
+/* Hero profile card */
 .hero-card {
   background: linear-gradient(180deg, #0d1b2e, #12243b), 0.9;
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -194,6 +217,7 @@ a {
   text-align: center;
 }
 
+/* Profile image */
 .profile-pic {
   width: 160px;
   height: 160px;
@@ -211,6 +235,7 @@ a {
   color: #6593a7;
 }
 
+/* Status indicator */
 .hero-card p,
 .status-row {
   color: #a9b6c8;
@@ -242,6 +267,11 @@ section h2 {
   padding: 35px;
 }
 
+/* =========================
+   SKILLS SECTION
+========================= */
+
+/* Skills grid layout */
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -260,6 +290,10 @@ section h2 {
   color: #f5f7fb;
 }
 
+/* =========================
+   PROJECTS SECTION
+========================= */
+
 .project-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -277,6 +311,7 @@ section h2 {
   place-items: center;
 }
 
+/* Project background images */
 .tesla {
   background: url("./Assets/Tesla-Project.png");
   background-size: cover;
@@ -313,6 +348,7 @@ section h2 {
   font-size: 15px;
 }
 
+/* Skills Used */
 .tech {
   margin: 16px 0;
   color: #6593a7 !important;
@@ -339,6 +375,10 @@ section h2 {
   background: none;
 }
 
+/* ================
+   CONTACT SECTION
+================= */
+
 .contact-details {
   display: grid;
   gap: 12px;
@@ -362,6 +402,7 @@ section h2 {
   transform: translateY(-3px);
 }
 
+/* Contact form styling */
 .contact-form {
   padding: 32px;
   display: grid;
@@ -389,18 +430,23 @@ section h2 {
   border-color: #6593a7;
 }
 
+/* Error messages */
 .error {
   min-height: 18px;
   color: #fb7185;
   font-size: 0.85rem;
 }
 
+/* Success message */
 .form-success {
   min-height: 20px;
   color: #22c55e;
   font-weight: 700;
 }
 
+/* ========
+   FOOTER
+========== */
 .footer {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding: 25px 0;
@@ -427,37 +473,67 @@ section h2 {
     text-decoration: underline;
 }
 
+/* =========================
+   RESPONSIVE DESIGN (FIXED)
+========================= */
+
+/* Tablets and below */
 @media (max-width: 900px) {
   .hero-grid,
   .two-column,
   .contact-grid {
     grid-template-columns: 1fr;
+    gap: 30px; /* reduced gap for better spacing */
+  }
+
+  .hero h1 {
+    font-size: 60px; /* prevents huge heading on tablets */
+  }
+
+  .hero h2 {
+    font-size: 24px;
   }
 
   .skills-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .project-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
+/* Mobile devices */
 @media (max-width: 720px) {
-  .menu-toggle {
-    display: block;
+
+  .site-header {
+    position: fixed;
   }
 
+  .navbar {
+    position: relative;
+  }
+
+  /* Mobile menu button */
+  .menu-toggle {
+    display: block;
+    z-index: 1100;
+  }
+
+  /* Mobile navigation dropdown */
   .nav-links {
     position: absolute;
     top: 76px;
     left: 0;
     width: 100%;
+
     display: none;
     flex-direction: column;
-    gap: 0;
+
     background: #07111f;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+    z-index: 1000;
   }
 
   .nav-links.show {
@@ -473,21 +549,82 @@ section h2 {
     padding: 16px 4%;
   }
 
+  /* Section spacing */
   .section {
-    padding: 75px 0;
+    padding: 70px 0;
   }
 
   .hero {
     padding-top: 110px;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 42px;
+  }
+
+  .hero h2 {
+    font-size: 20px;
+  }
+
+  .hero-grid,
+  .two-column,
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .hero-card,
+  .text-box,
+  .contact-form {
+    padding: 22px;
+  }
+
+  /* Skills grid becomes 2 columns on mobile */
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Projects become single column */
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 480px) {
+
+  .hero h1 {
+    font-size: 34px;
+  }
+
+  .hero h2 {
+    font-size: 18px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 220px;
   }
 
   .skills-grid {
     grid-template-columns: 1fr;
   }
 
-  .hero-card,
-  .text-box,
-  .contact-form {
-    padding: 25px;
+  .project-body p {
+    font-size: 14px;
+  }
+
+  .section {
+    padding: 60px 0;
   }
 }
