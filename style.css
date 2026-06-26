@@ -279,14 +279,23 @@ section h2 {
 
 .tesla {
   background: url("./Assets/Tesla-Project.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .netflix {
   background: url("./Assets/NetflixLanding\ Page.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .youtube {
   background: url("./Assets/YouTube.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .project-body {
@@ -407,11 +416,15 @@ section h2 {
 }
 
 .copyrights {
-    font-size: 12px;
+    font-size: 13px;
 }
 
 .backtotop {
     font-size: 13px;
+}
+
+.backtotop:hover {
+    text-decoration: underline;
 }
 
 @media (max-width: 900px) {
